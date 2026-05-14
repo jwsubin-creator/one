@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #1E40AF;
+  --color-natural-bg: #FDFBF7;
+  --color-border-natural: #EAE5D8;
+  --color-border-card: #F0ECE3;
+  --color-badge-bg: #F0F4FF;
+  --color-badge-border: #D1DBFF;
+  
+  --shadow-natural: 0 4px 20px rgba(0,0,0,0.03);
+}
