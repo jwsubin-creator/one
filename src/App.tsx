@@ -22,9 +22,8 @@ import {
 export default function App() {
   const phoneNumber = "053-641-2001";
   const rawPhoneNumber = "0536412001";
-  const address = "대구 달서구 송현로20 KCC인테리어";
+  const address = "대구광역시 달서구 한실로6길 126, 203호";
 
-  // 1. 슬라이드 상태 및 데이터
   const [currentSlide, setCurrentSlide] = useState(0);
   const caseImages = [
     "https://lh3.googleusercontent.com/d/1USGUqpdoxt9FaelWrqV9UPanSHRiNnjr",
@@ -35,7 +34,6 @@ export default function App() {
     "https://lh3.googleusercontent.com/d/1_s5Y_P8tR-XFHOIhQbwkHYYgFI_gGMlX"
   ];
 
-  // 포트폴리오 갤러리 이미지 데이터
   const portfolioImages = [
     { src: "https://lh3.googleusercontent.com/d/1GhLjNvP6Il7tnURwxmhQh5aCp-8ylx_N", title: "누수원인 제거" },
     { src: "https://lh3.googleusercontent.com/d/1W4sCwi7IEB1ZEQm5qPhbc8Z3IWO9cVSL", title: "전기 점검" },
@@ -48,7 +46,7 @@ export default function App() {
     { src: "https://lh3.googleusercontent.com/d/1kM1HhM2eeOeis7LtZR-kXJ_t6FEkLER-", title: "욕실천장 교체" },
     { src: "https://lh3.googleusercontent.com/d/1gyKD3IJM2-NUuGOaWof1eGStD3XmCk-Y", title: "피톤치드 소독" },
     { src: "https://lh3.googleusercontent.com/d/13iqq5OAUuvTUV3zcheFLfK66UuAXAy9x", title: "석고 교체" },
-    { src: "https://lh3.googleusercontent.com/d/1ib5EL_61S_bl39N-XwG45-tLBUCTENYK", title: "열탐지 검사" },  
+    { src: "https://lh3.googleusercontent.com/d/1ib5EL_61S_bl39N-XwG45-tLBUCTENYK", title: "열탐지 검사" },
     { src: "https://lh3.googleusercontent.com/d/1mGdOP1UH7IDKBvORCMkFcg99TsdOR7cC", title: "방수 공사" }
   ];
 
@@ -102,6 +100,15 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-[#FDFBF7] text-[#333] font-[Pretendard]">
+
+      {/* 공식 홈페이지 이전 안내 상단 배너 */}
+      <div style={{background:'#1e3a8a', color:'#fff', textAlign:'center', padding:'10px 16px', fontSize:'14px', fontWeight:600}}>
+        ※ 이 페이지는 구 홈페이지입니다.&nbsp;
+        <a href="https://onestopleakcare.com" target="_blank" rel="noopener noreferrer" style={{color:'#93c5fd', textDecoration:'underline', fontWeight:700}}>
+          공식 홈페이지 바로가기 →
+        </a>
+      </div>
+
       <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md border-b border-gray-100 z-50">
         <div className="max-w-7xl mx-auto px-6 h-[80px] flex items-center justify-between">
           <div className="flex items-center gap-3">
@@ -143,7 +150,6 @@ export default function App() {
             </AnimatePresence>
             <div className="absolute inset-0 bg-white/40 bg-gradient-to-r from-white/95 via-white/40 to-transparent z-[1]" />
           </div>
-
           <div className="max-w-7xl mx-auto w-full px-6 relative z-10">
             <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }} className="max-w-2xl break-keep">
               <h1 className="text-3xl md:text-5xl font-black text-gray-900 mb-6 leading-tight tracking-tight">
@@ -152,7 +158,7 @@ export default function App() {
                 <span className="text-blue-600 underline decoration-blue-200 underline-offset-8">한번에 처리해드립니다.</span>
               </h1>
               <p className="text-lg md:text-xl text-gray-700 mb-10 font-medium break-keep">
-                누수 손해사정인 자문팀 보유,<br /> 
+                누수 손해사정인 자문팀 보유,<br />
                 <span className="text-blue-700 font-bold">제대로 된 누수전문업체</span>를 만나보세요.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -189,12 +195,10 @@ export default function App() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-black mb-4">수백건의 경험과 노하우 보유</h2>
-              <p className="text-gray-500"> 골치아픈 누수, 어떻게 해결할까 막막하셨죠? </p>
-              <p className="text-gray-500"> '누수 보상조율전문 손해사정인 자문팀'을 보유한,</p>
-              <p className="text-gray-500"> 대구/경북 최다사례보유 누수원스톱업체가 전문적인 솔루션을 제공합니다.</p>
-          
+              <p className="text-gray-500">골치아픈 누수, 어떻게 해결할까 막막하셨죠?</p>
+              <p className="text-gray-500">'누수 보상조율전문 손해사정인 자문팀'을 보유한,</p>
+              <p className="text-gray-500">대구/경북 최다사례보유 누수원스톱업체가 전문적인 솔루션을 제공합니다.</p>
               <p className="text-red-500 font-bold">윗집 누수원인 수리+아래집 피해복구+보상조율/보험처리까지 한번에 해결 가능!</p>
-              
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {services.map((s, i) => (
@@ -213,13 +217,13 @@ export default function App() {
           </div>
         </section>
 
-        {/* 공사 사례 포트폴리오 (오류 해결 및 통합됨) */}
+        {/* 공사 사례 포트폴리오 */}
         <section id="portfolio" className="py-24 px-6 bg-white">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-black text-gray-900 mb-4">다양한 공사사례 사진</h2>
               <div className="flex justify-center mt-4 mb-8">
-                <a href="https://blog.naver.com/procare119" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-white text-blue-600 border border-blue-200 px-6 py-3 rounded-full text-sm font-bold shadow-sm hover:border-blue-600 hover:bg-blue-50 transition-all group">
+                <a href="https://blog.naver.com/leakprocare" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-white text-blue-600 border border-blue-200 px-6 py-3 rounded-full text-sm font-bold shadow-sm hover:border-blue-600 hover:bg-blue-50 transition-all group">
                   <div className="w-8 h-8 bg-blue-50 rounded-full flex items-center justify-center group-hover:bg-blue-100 transition-colors">
                     <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
                   </div>
@@ -249,44 +253,40 @@ export default function App() {
           </div>
         </section>
 
-      {/* 프로세스 섹션 */}
-<section id="process" className="py-24 px-6 bg-[#F8F9FB]">
-  <div className="max-w-7xl mx-auto">
-    <div className="text-center mb-16">
-      <h2 className="text-3xl font-black mb-4">변수가 많은 누수문제를 확실하게</h2>
-    </div>
+        {/* 프로세스 섹션 */}
+        <section id="process" className="py-24 px-6 bg-[#F8F9FB]">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-black mb-4">변수가 많은 누수문제를 확실하게</h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+              {steps.map((step, i) => (
+                <div key={i} className="bg-white p-8 rounded-3xl relative overflow-hidden shadow-sm border border-gray-50">
+                  <span className="absolute -right-2 -top-2 text-7xl font-black text-blue-50/50">{step.step}</span>
+                  <h3 className="text-xl font-bold mb-3 relative z-10">{step.title}</h3>
+                  <p className="text-gray-500 text-sm leading-relaxed relative z-10">{step.desc}</p>
+                </div>
+              ))}
+            </div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="mt-12 rounded-[2rem] overflow-hidden shadow-md border border-gray-100 max-w-5xl mx-auto"
+            >
+              <img
+                src="https://lh3.googleusercontent.com/d/1uMdbxSUAnC1JFRY8S2sPsXYDrVMyaOLu"
+                alt="서비스 절차 안내 이미지"
+                className="w-full h-auto object-cover"
+              />
+            </motion.div>
+          </div>
+        </section>
 
-    {/* 1. 프로세스 카드 그리드 (중복 제거됨) */}
-    <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-      {steps.map((step, i) => (
-        <div key={i} className="bg-white p-8 rounded-3xl relative overflow-hidden shadow-sm border border-gray-50">
-          <span className="absolute -right-2 -top-2 text-7xl font-black text-blue-50/50">{step.step}</span>
-          <h3 className="text-xl font-bold mb-3 relative z-10">{step.title}</h3>
-          <p className="text-gray-500 text-sm leading-relaxed relative z-10">{step.desc}</p>
-        </div>
-      ))}
-    </div>
-
-    {/* 2. 하단 안내 이미지 (크기 최적화 및 위치 조정) */}
-    <motion.div 
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      className="mt-12 rounded-[2rem] overflow-hidden shadow-md border border-gray-100 max-w-5xl mx-auto"
-    >
-      <img 
-        src="https://lh3.googleusercontent.com/d/1uMdbxSUAnC1JFRY8S2sPsXYDrVMyaOLu" 
-        alt="서비스 절차 안내 이미지" 
-        className="w-full h-auto object-cover"
-      />
-    </motion.div>
-  </div>
-</section>
-
-        {/* 연락처 및 지도 */}
+        {/* 연락처 */}
         <section id="contact" className="py-24 px-6 bg-white">
-          <div className="max-w-4xl mx-auto bg-gray-50 p-8 md:p-16 rounded-[40px] shadow-sm border border-gray-100 flex flex-col md:flex-row gap-12">
-            <div className="flex-1 space-y-8">
+          <div className="max-w-2xl mx-auto bg-gray-50 p-8 md:p-16 rounded-[40px] shadow-sm border border-gray-100">
+            <div className="space-y-8">
               <h2 className="text-3xl font-black">찾아오시는 길</h2>
               <div className="space-y-6">
                 <div className="flex gap-4">
@@ -304,41 +304,35 @@ export default function App() {
                   </div>
                 </a>
               </div>
-              <a href="https://map.naver.com/v5/search/%EB%8C%80%EA%B5%AC%20%EB%8B%AC%EC%84%9C%EA%B5%AC%20%EC%86%A1%ED%98%84%EB%A1%9C%2020%20KCC%EC%9D%B8%ED%85%8C%EB%A6%AC%EC%96%B4" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm font-bold text-blue-600 bg-blue-50 px-4 py-2 rounded-lg hover:bg-blue-100 transition-colors">
+              <a href="https://map.naver.com/v5/search/%EB%8C%80%EA%B5%AC%EA%B4%91%EC%97%AD%EC%8B%9C%20%EB%8B%AC%EC%84%9C%EA%B5%AC%20%ED%95%9C%EC%8B%A4%EB%A1%9C6%EA%B8%B8%20126" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm font-bold text-blue-600 bg-blue-50 px-4 py-2 rounded-lg hover:bg-blue-100 transition-colors">
                 네이버 지도로 길찾기 <ArrowRight size={14} />
               </a>
-            </div>
-            <div className="flex-1 min-h-[300px] rounded-[2rem] overflow-hidden border border-gray-200 shadow-inner bg-white">
-              <img src="https://lh3.googleusercontent.com/d/1IZj5rG3kF_S-bw_fO53FD6VC7tE8VbOZ" alt="지도" className="w-full h-full object-cover brightness-110" />
             </div>
           </div>
         </section>
       </main>
 
+      {/* 공식 홈페이지 이전 안내 하단 버튼 */}
+      <section className="py-12 px-6 bg-blue-600 text-center">
+        <p className="text-white text-base mb-4 font-medium">
+          저희 공식 홈페이지가 새로 오픈했습니다.
+        </p>
+        
+          href="https://onestopleakcare.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 bg-white text-blue-600 px-8 py-4 rounded-xl text-lg font-bold shadow-lg hover:bg-blue-50 transition-all"
+        >
+          한번에누수 공식 홈페이지 바로가기 →
+        </a>
+      </section>
 
-{/* 공식 홈페이지 이전 안내 */}
-<section className="py-12 px-6 bg-blue-600 text-center">
-  <p className="text-white text-base mb-4 font-medium">
-    저희 공식 홈페이지가 새로 오픈했습니다.
-  </p>
-  <a 
-    href="https://onestopleakcare.com" 
-    target="_blank"
-    rel="noopener noreferrer"
-    className="inline-flex items-center gap-2 bg-white text-blue-600 px-8 py-4 rounded-xl text-lg font-bold shadow-lg hover:bg-blue-50 transition-all"
-  >
-    한번에누수 공식 홈페이지 바로가기 →
-  </a>
-</section>
-
-
-      
       <footer className="bg-white border-t border-gray-100 py-12 px-6">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-center md:text-left">
             <p className="font-bold text-gray-900">한번에누수</p>
-            <p className="text-sm text-gray-400 mt-1">대구광역시 달서구 한실로6길 126, 203호 | <a href={`tel:${rawPhoneNumber}`} className="hover:text-blue-600 font-medium"> {phoneNumber}</a></p>
-            <a href="https://blog.naver.com/procare119" target="_blank" rel="noopener noreferrer" className="font-bold text-blue-600 hover:underline block mt-1">https://blog.naver.com/procare119</a>
+            <p className="text-sm text-gray-400 mt-1">대구광역시 달서구 한실로6길 126, 203호 | <a href={`tel:${rawPhoneNumber}`} className="hover:text-blue-600 font-medium">{phoneNumber}</a></p>
+            <a href="https://blog.naver.com/leakprocare" target="_blank" rel="noopener noreferrer" className="font-bold text-blue-600 hover:underline block mt-1">https://blog.naver.com/leakprocare</a>
           </div>
           <p className="text-xs text-gray-300">© 2026 HANBONE LEAK. ALL RIGHTS RESERVED.</p>
         </div>
