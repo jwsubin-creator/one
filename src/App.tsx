@@ -315,11 +315,29 @@ export default function App() {
         </section>
       </main>
 
+
+{/* 공식 홈페이지 이전 안내 */}
+<section className="py-12 px-6 bg-blue-600 text-center">
+  <p className="text-white text-base mb-4 font-medium">
+    저희 공식 홈페이지가 새로 오픈했습니다.
+  </p>
+  <a 
+    href="https://onestopleakcare.com" 
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-flex items-center gap-2 bg-white text-blue-600 px-8 py-4 rounded-xl text-lg font-bold shadow-lg hover:bg-blue-50 transition-all"
+  >
+    한번에누수 공식 홈페이지 바로가기 →
+  </a>
+</section>
+
+
+      
       <footer className="bg-white border-t border-gray-100 py-12 px-6">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-center md:text-left">
-            <p className="font-bold text-gray-900">한번에누수 & KCC인테리어</p>
-            <p className="text-sm text-gray-400 mt-1">대구광역시 달서구 송현로 20 | <a href={`tel:${rawPhoneNumber}`} className="hover:text-blue-600 font-medium"> {phoneNumber}</a></p>
+            <p className="font-bold text-gray-900">한번에누수</p>
+            <p className="text-sm text-gray-400 mt-1">대구광역시 달서구 한실로6길 126, 203호 | <a href={`tel:${rawPhoneNumber}`} className="hover:text-blue-600 font-medium"> {phoneNumber}</a></p>
             <a href="https://blog.naver.com/procare119" target="_blank" rel="noopener noreferrer" className="font-bold text-blue-600 hover:underline block mt-1">https://blog.naver.com/procare119</a>
           </div>
           <p className="text-xs text-gray-300">© 2026 HANBONE LEAK. ALL RIGHTS RESERVED.</p>
